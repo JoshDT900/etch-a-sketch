@@ -8,4 +8,4 @@ let gridBuilder = (userInput) => {
   gridBox.style.gridTemplateColumns = `repeat(${userInput}, 1fr)`;
 }
 
-gridBuilder(8);
+gridBuilder(80);
