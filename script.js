@@ -6,11 +6,11 @@ let colorChoice = "red";
 
 // Handles removal and re-addition of grid boxes based on user input
 let userPrompt = () => {
-  userInput = parseInt(prompt("Set grid area between 8 and 100: "));
+  userInput = parseInt(prompt("Set grid area between 8 and 100: "));  
 
-  if (userInput > 100 || userInput < 8 || userInput!= 'number') {
+  if (userInput > 100 || userInput < 8) {
     userInput = 16;
-    alert("Number too large or too small. Please select a number between 8 and 100. Setting to 16.")
+    alert("Number too large or too small. Please select a number between 8 and 100. (Default is 16)")
   }
 
   boxArr.forEach(box => box.remove());
