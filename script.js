@@ -1,14 +1,16 @@
 let gridBox = document.querySelector('.grid-container');
 let resizeBtn = document.querySelector('.resizeGridBtn')
-let userInput = 40; //parseInt(prompt("Set grid area between 8 and 100: "));
+let userInput = 16;
 let boxArr = [];
 let colorChoice = "red";
 
 // Handles removal and re-addition of grid boxes based on user input
 let userPrompt = () => {
-  userInput = parseInt(prompt("Set grid area between 8 and 100: "));  
+  userInput = parseInt(prompt("Set grid area between 8 and 100: ")); 
 
-  if (userInput > 100 || userInput < 8) {
+  console.log(typeof userInput)
+
+  if (userInput > 100 || userInput < 8 || !userInput) {
     userInput = 16;
     alert("Number too large or too small. Please select a number between 8 and 100. (Default is 16)")
   }
