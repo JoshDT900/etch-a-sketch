@@ -1,5 +1,5 @@
 let gridBox = document.querySelector('.grid-container');
-let userInput = parseInt(prompt("Enter a number"));
+let userInput = 40; //parseInt(prompt("Set grid area between 8 and 100: "));
 let boxArr = [];
 let colorChoice = "red";
 
