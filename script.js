@@ -8,7 +8,7 @@ let colorChoice = "red";
 let userPrompt = () => {
   userInput = parseInt(prompt("Set grid area between 8 and 100: "));
 
-  if (userInput > 100 || userInput < 8) {
+  if (userInput > 100 || userInput < 8 || userInput!= 'number') {
     userInput = 16;
     alert("Number too large or too small. Please select a number between 8 and 100. Setting to 16.")
   }
