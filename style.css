@@ -1,0 +1,9 @@
+.grid-container {
+  display: grid;  
+  width: 960px;
+  height: 960px;  
+}
+
+.grid-container .gridBox {
+  border: 1px solid black;
+}
