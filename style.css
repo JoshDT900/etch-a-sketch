@@ -1,11 +1,33 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .flexMain {
   display: flex;
+  justify-content: center;
+}
+
+.flexHead {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(51, 50, 50);
+  color: rgb(236, 241, 163);  
+}
+
+.gridHolder {
+  margin-right: auto;
+  margin-top: 50px;
+  margin-left: 50px;
+  box-shadow: 5px 5px 2px 3px rgba(34, 34, 34, 0.2);;
 }
 
 .grid-container {
   display: grid;  
-  width: 960px;
-  height: 960px;  
+  width: 800px;
+  height: 800px;  
 }
 
 .grid-container .gridBox {
