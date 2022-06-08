@@ -1,7 +1,12 @@
 let gridBox = document.querySelector('.grid-container');
-let userInput = 16;
+let userInput = parseInt(prompt("Enter a number"));
 let boxArr = [];
 let colorChoice = "red";
+
+if (userInput > 100 || userInput < 8) {
+    userInput = 16;
+    alert("Number too large or too small. Please select a number between 8 and 100.")
+  }
 
 let gridBuilder = (userInput) => {
   for (let i = 0; i < (userInput * userInput); i++) {
