@@ -41,17 +41,42 @@ for (let i = 0; i < (userInput * userInput); i++) {
   boxArr.push(document.querySelector(`.gridBox${i}`))
 }
 
-
-// Sets background color for each hovered grid box.
-let changeColor = (e) => {
+let randomColor = () => {
   let colorNum1 = Math.floor(Math.random() * 255);
   let colorNum2 = Math.floor(Math.random() * 255);
   let colorNum3 = Math.floor(Math.random() * 255);
+
   let colorChoice = `rgb(${colorNum1}, ${colorNum2}, ${colorNum3})`;
 
-  e.target.style = `background-color: ${colorChoice}`;
+  let colorArr = [colorNum1, colorNum2, colorNum3]
+
+  return colorArr;
+}
+
+// Sets background color for each hovered grid box.
+let changeColor = (e) => {
+  let colorChoices = randomColor();
+  if (e.target.style.backgroundColor === '') {     
+    e.target.style = `background-color: rgb(${colorChoices[0]}, ${colorChoices[1]}, ${colorChoices[2]})`;
+  }
+
+  e.target.addEventListener('mouseover', changeBlack);  
+}
+
+let changeBlack = (e) => {
+  let rbg = e.target.style.backgroundColor.match(/\d+/g);
+
+  let colorOne = parseInt(rbg[0]) - 25;
+  let colorTwo = parseInt(rbg[1]) - 25;
+  let colorThree = parseInt(rbg[2]) -25;
+
+  return e.target.style = `background-color: rgb(${colorOne}, ${colorTwo}, ${colorThree})`;
+}
+
+for (let i = 0; i < boxArr.length; i++){
+  if (boxArr[i].style.backgroundColor === "") {
+    boxArr.forEach(box => box.addEventListener('mouseover', changeColor))
+  }
 }
 
 resizeBtn.addEventListener('click', userPrompt)
-boxArr.forEach(box => box.addEventListener('mouseover', changeColor))
-

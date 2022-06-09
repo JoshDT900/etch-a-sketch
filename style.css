@@ -65,3 +65,23 @@ body {
   color: white;
   font-weight: bolder;
 }
+
+.footerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid black;
+  padding: 10px;
+  background-color: azure;
+}
+
+.footerBox .gitLogo img {
+  height: auto;
+  width: 50px;
+}
+
+.footerBox a {
+  text-decoration: none;
+  font-weight: bold;
+}
